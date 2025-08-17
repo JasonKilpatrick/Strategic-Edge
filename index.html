@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strategic Edge LLC — Get in Touch</title>
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+  <meta name="description" content="Contact Strategic Edge LLC and choose how you'd like us to reach you: email, SMS, and voice.">
+</head>
+<body>
+  <header class="container">
+    <h1>Strategic Edge LLC</h1>
+    <p class="subtitle">AI-driven lead capture with clear, compliant consent.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Get in touch</h2>
+      <p>Please fill out your details and choose your communication preferences.</p>
+
+      <form id="lead-form" novalidate>
+        <div class="grid">
+          <label>Full Name<span aria-hidden="true" class="req">*</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+
+          <label>Email<span aria-hidden="true" class="req">*</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+
+          <label>Mobile Phone<span aria-hidden="true" class="req">*</span>
+            <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="(555) 123-4567" required>
+          </label>
+        </div>
+
+        <fieldset class="prefs">
+          <legend>Communication Preferences</legend>
+
+          <label class="checkbox">
+            <input type="checkbox" name="opt_in_email" value="yes">
+            <span>I agree to receive <strong>emails</strong> from Strategic Edge LLC.</span>
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" name="opt_in_sms" value="yes">
+            <span>I agree to receive <strong>SMS/text messages</strong> from Strategic Edge LLC at the number provided.
+            <small class="hint">Msg &amp; data rates may apply. Frequency varies. Reply <strong>STOP</strong> to cancel and <strong>HELP</strong> for help.</small></span>
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" name="opt_in_voice" value="yes">
+            <span>I agree to receive <strong>autodialed or prerecorded voice calls</strong> from Strategic Edge LLC at the number provided.</span>
+          </label>
+        </fieldset>
+
+        <label class="checkbox terms">
+          <input type="checkbox" name="terms" required>
+          <span>I agree to the <a href="/terms.html" target="_blank" rel="noopener">Terms</a> and
+          <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. Consent for marketing is not a condition of purchase.</span>
+        </label>
+
+        <!-- Hidden metadata fields populated by JS and server -->
+        <input type="hidden" name="consent_timestamp" value="">
+        <input type="hidden" name="consent_user_agent" value="">
+        <input type="hidden" name="consent_ip" value="">
+
+        <div class="actions">
+          <button type="submit" class="btn">Submit</button>
+          <div id="form-status" role="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>&copy; <span id="year"></span> Strategic Edge LLC. All rights reserved.</p>
+  </footer>
+
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
